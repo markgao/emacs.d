@@ -49,6 +49,7 @@
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
 
+(require-package 'use-package)
 (require-package 'diminish)
 (maybe-require-package 'scratch)
 (require-package 'command-log-mode)
@@ -92,7 +93,7 @@
 (require 'init-csv)
 (require 'init-erlang)
 (require 'init-javascript)
-(require 'init-php)
+(require 'init-golang)
 (require 'init-org)
 (require 'init-nxml)
 (require 'init-html)
@@ -103,8 +104,6 @@
 (require 'init-haskell)
 (require 'init-elm)
 (require 'init-purescript)
-(require 'init-ruby)
-(require 'init-rails)
 (require 'init-sql)
 (require 'init-rust)
 (require 'init-toml)
