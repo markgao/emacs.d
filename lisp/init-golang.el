@@ -5,6 +5,7 @@
 (when (maybe-require-package 'go-mode)
   (autoload 'go-mode "go-mode" nil t)
   (after-load 'go-mode
+    (setq-default tab-width 4)
     (add-hook 'before-save-hook 'gofmt-before-save)
     (add-hook 'go-mode-hook (lambda ()
                               (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
