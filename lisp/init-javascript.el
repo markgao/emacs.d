@@ -105,7 +105,8 @@
 
 (when (maybe-require-package 'add-node-modules-path)
   (dolist (mode '(typescript-mode js-mode js2-mode coffee-mode))
-    (add-hook (derived-mode-hook-name mode) 'add-node-modules-path)))
+    (add-hook (derived-mode-hook-name mode) 'add-node-modules-path)
+    (setq-default typescript-indent-level 2)))
 
 
 (provide 'init-javascript)
