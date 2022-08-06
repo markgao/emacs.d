@@ -15,7 +15,7 @@
 
 (setq-default
  blink-cursor-interval 0.4
- bookmark-default-file (expand-file-name ".bookmarks.el" user-emacs-directory)
+ bookmark-default-file (locate-user-emacs-file ".bookmarks.el")
  buffers-menu-max-size 30
  case-fold-search t
  column-number-mode t
@@ -100,6 +100,7 @@
 
 (when (boundp 'display-fill-column-indicator)
   (setq-default indicate-buffer-boundaries 'left)
+  (setq-default fill-column 80)
   (setq-default display-fill-column-indicator-character ?\u254e)
   (add-hook 'prog-mode-hook 'display-fill-column-indicator-mode))
 
